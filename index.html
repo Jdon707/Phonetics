@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--(audio/)(\[)(.*?)(\])-->
+<!--audiofiles/Plosives/\3-->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>IPA Chart</title>
+<style>
+    body {
+      font-family: Arial;
+      font-size: 14px;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    th, td {
+	  font-family: Arial;
+      border: 1px solid #aaa;
+      padding: 4px 6px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+	.blue-background {
+	background-image: linear-gradient(#EBF6F9, white);
+    /* background-color: #EBF6F9; Light blue background */
+  }
+  
+  .grey-background {
+    /*background-color: #f9f9f9;  Light grey background */
+	background-image: linear-gradient(#f9f9f9, white);
+  }
+  .ipa-symbol {
+      font-size: 24px;
+	  font-family:DoulosSIL;
+      padding: 10px;
+      cursor: pointer;
+      display: inline-block;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+	  text-align: center;
+      vertical-align: middle;
+	  
+    }
+    .ipa-symbol:hover {
+      background-color: #e0e0e0;
+    }
+	.audio-player {
+      position: fixed; /* Makes it float */
+      top: 20px;     /* Distance from bottom */
+      right: 20px;      /* Distance from right */
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      z-index: 9999;    /* Keeps it on top */
+    }
+
+// My Code
+/* --- LCLC 2025 Header Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap');
+
+.lclc-header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background: linear-gradient(to right, #DFF6FF, #FDFDFD);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lclc-header h1 {
+  font-size: 48px;
+  margin: 0;
+  color: #045C92;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.lclc-header p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+  font-style: italic;
+}
+
+.lclc-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #7e57c2;
+  margin: 18px auto 0;
+  border-radius: 2px;
+}
+  </style>
+  <script>
+     
+	 function playMyAudio(filePath) {
+      const audio = document.getElementById('mainAudio');
+      audio.src = filePath;
+      audio.play();
+    }
+
+  </script>
+</head>
+<body>
+<div class="lclc-header">
+<center>
+  <h1>LCLC 2025</h1>
+  <p>Language and Culture Learning Community</p>
+</center>
+</div>
+<h2><center><img src="./images/Header.png"></center></h2>
+<!-- Shared audio control -->
+<div class="audio-player">
+<audio id="mainAudio" controls></audio>
+</div>
+<div>
+<table height="100%" width="100%">
+<tr>
+<th colspan="2">⬇️➡️</th>
+<th class="blue-background" colspan="26">PLACE OF ARTICULATION</th>
+</tr>
+<tr colspan="2">
+<th class="blue-background" colspan="2" rowspan="2">MANNER OF<br/>ARTICULATION</th>
+<th class="blue-background" colspan="2">Bilabial</th>
+<th class="blue-background" colspan="2">Labio-Dental</th>
+<th class="blue-background" colspan="2">Dental</th>
+<th class="blue-background" colspan="2">Alveolar</th>
+<th class="blue-background" colspan="2">Post-Alveolar</th>
+<th class="blue-background" colspan="2">Retroflex</th>
+<th class="blue-background" colspan="2">Alveolo-Palatal</th>
+<th class="blue-background" colspan="2">Palatal</th>
+<th class="blue-background" colspan="2">Velar</th>
+<th class="blue-background" colspan="2">Uvular</th>
+<th class="blue-background" colspan="2">Pharyngeal</th>
+<th class="blue-background" colspan="2">Glottal</th>
+<th class="blue-background" colspan="2">Labial-Velar</th>
+</tr>
+<tr class="blue-background">
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+<td>Vl</td><td>Vd</td>
+</tr>
+<tr class="g-background">
+<td class="blue-background"  rowspan="2">Plosives</td>
+<td class="blue-background" >Unaspirated</td>
+<td><button class="ipa-symbol" onclick="playMyAudio('./audiofiles/Plosives/p.mp3')">[p]</button></td><td><button class="ipa-symbol" onclick='playMyAudio("./audiofiles/Plosives/b.mp3")'>[b]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/t̪.mp3")'>[t̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/d̪.mp3")'>[d̪]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/t.mp3")'>[t]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/d.mp3")'>[d]</button></td>
+<td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ʈ.mp3")'>[ʈ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ɖ.mp3")'>[ɖ]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/c.mp3")'>[c]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ɟ.mp3")'>[ɟ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/k.mp3")'>[k]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ɡ.mp3")'>[ɡ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/q.mp3")'>[q]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ɢ.mp3")'>[ɢ]</button></td><td></td><td></td><td colspan="2"><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ʔ.mp3")'>[ʔ]</button></td> <td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/k͡p.mp3")'>[k͡p]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/g͡b.mp3")'>[g͡b]</button></td>
+</tr>
+<tr>
+<td class="blue-background" >Aspirated</td>
+<td><button class="ipa-symbol" onclick='playMyAudio("./audiofiles/Plosives/pʰ.mp3")'>[pʰ]</button></td><td><button class="ipa-symbol" onclick='playMyAudio("./audiofiles/Plosives/bʰ.mp3")'>[bʰ]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/t̪ʰ.mp3")'>[t̪ʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/d̪ʰ.mp3")'>[d̪ʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/tʰ.mp3")'>[tʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/dʰ.mp3")'>[dʰ]</button></td>
+<td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ʈʰ.mp3")'>[ʈʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ɖʰ.mp3")'>[ɖʰ]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/cʰ.mp3")'>[cʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ɟʰ.mp3")'>[ɟʰ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/kʰ.mp3")'>[kʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ɡʰ.mp3")'>[ɡʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/qʰ.mp3")'>[qʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Plosives/ɢʰ.mp3")'>[ɢʰ]</button></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background"  rowspan="2">Central Fricatives</td>
+<td class="blue-background" >Flat</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɸ.mp3")'>[ɸ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/β.mp3")'>[β]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/f.mp3")'>[f]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/v.mp3")'>[v]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/θ.mp3")'>[θ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ð.mp3")'>[ð]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɹ̝̥.mp3")'>[ɹ̥<sup> ̝</sup>]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɹ̝.mp3")'>[ɹ<sup> ̝</sup>]</button></td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ç.mp3")'>[ç]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ʝ.mp3")'>[ʝ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/x.mp3")'>[x]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɣ.mp3")'>[ɣ]</button></td><td colspan="2"><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/χ.mp3")'>[χ]</button><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ʁ.mp3")'>[ʁ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ħ.mp3")'>[ħ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ʕ.mp3")'>[ʕ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/h.mp3")'>[h]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɦ.mp3")'>[ɦ]</button></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background" >Grooved</td>
+<td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/s̪.mp3")'>[s̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/z̪.mp3")'>[z̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/s.mp3")'>[s]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/z.mp3")'>[z]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ʃ.mp3")'>[ʃ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ʒ.mp3")'>[ʒ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ʂ.mp3")'>[ʂ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ʐ.mp3")'>[ʐ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɕ.mp3")'>[ɕ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ʑ.mp3")'>[ʑ]</button></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background"  colspan="2">Lateral Fricatives</td>
+<td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɬ̪.mp3")'>[ɬ̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɮ̪.mp3")'>[ɮ̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɬ.mp3")'>[ɬ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Fricatives/ɮ.mp3")'>[ɮ]</button></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background"  rowspan="3">Central Affricates</td>
+<td class="blue-background" >Flat</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/pɸ.mp3")'>[pɸ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/bβ.mp3")'>[bβ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/pf.mp3")'>[pf]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/bv.mp3")'>[bv]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/t̪θ.mp3")'>[t̪θ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/d̪ð.mp3")'>[d̪ð]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/tɹ̥̝.mp3")'>[tɹ̥<sup> ̝</sup>]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/dɹ̝.mp3")'>[dɹ<sup> ̝</sup>]</button></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/cç.mp3")'>[cç]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/ɟʝ.mp3")'>[ɟʝ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/kx.mp3")'>[kx]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/ɡɣ.mp3")'>[ɡɣ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/qχ.mp3")'>[qχ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/ɢʁ.mp3")'>[ɢʁ]</button></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background" >Grooved Unaspirated</td>
+<td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/t̪s̪.mp3")'>[t̪s̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/d̪z̪.mp3")'>[d̪z̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/ts.mp3")'>[ts]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/dz.mp3")'>[dz]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/tʃ.mp3")'>[tʃ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/dʒ.mp3")'>[dʒ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/ʈʂ.mp3")'>[ʈʂ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/ɖʐ.mp3")'>[ɖʐ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/tɕ.mp3")'>[tɕ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/dʑ.mp3")'>[dʑ]</button></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background" >Grooved Aspirated</td>
+<td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/t̪s̪ʰ.mp3")'>[t̪s̪ʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/d̪z̪ʰ.mp3")'>[d̪z̪ʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/tsʰ.mp3")'>[tsʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/dzʰ.mp3")'>[dzʰ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/tʃʰ.mp3")'>[tʃʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/dʒʰ.mp3")'>[dʒʰ]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/tɕʰ.mp3")'>[tɕʰ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/dʑʰ.mp3")'>[dʑʰ]</button></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background"  colspan="2">Lateral Affricates</td>
+<td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/t̪ɬ̪.mp3")'>[t̪ɬ̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/d̪ɮ̪.mp3")'>[d̪ɮ̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/tɬ.mp3")'>[tɬ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Affricates/dɮ.mp3")'>[dɮ]</button></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background"  colspan="2">Nasals</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/m̥.mp3")'>[m̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/m.mp3")'>[m]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/n̪̥.mp3")'>[n̪̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/n̪.mp3")'>[n̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/n̥.mp3")'>[n̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/n.mp3")'>[n]</button></td>
+<td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/ɳ̥.mp3")'>[ɳ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/ɳ.mp3")'>[ɳ]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/ɲ̥.mp3")'>[ɲ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/ɲ.mp3")'>[ɲ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/ŋ̥.mp3")'>[ŋ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/ŋ.mp3")'>[ŋ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/ɴ̥.mp3")'>[ɴ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/ɴ.mp3")'>[ɴ]</button></td><td></td><td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Nasals/ŋ͡m.mp3")'>[ŋ͡m]</button></td>
+</tr>
+<tr>
+<td class="blue-background"  rowspan="3">Vibrants // Flap Nasal Flap</td>
+<td class="blue-background" >Central</td>
+<td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ⱱ.mp3")'>[ⱱ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ɾ̪̥.mp3")'>[ɾ̪̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ɾ̪.mp3")'>[ɾ̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ɾ̥.mp3")'>[ɾ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ɾ.mp3")'>[ɾ]</button></td> <td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ɽ.mp3")'>[ɽ]</button><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ɽʰ.mp3")'>[ɽʰ]</button>  </td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background" >Nasal Flap</td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ɳ̆.mp3")'>[ɳ̆]</button></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background" >Lateral</td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/l̆.mp3")'>[l̆]</button></td> <td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ɭ̆.mp3")'>[ɭ̆]</button></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background"  colspan="2">Vibrants // Trills </td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ʙ̥.mp3")'>[ʙ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ʙ.mp3")'>[ʙ]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/r̪̥.mp3")'>[r̪̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/r̪.mp3")'>[r̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/r̥.mp3")'>[r̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/r.mp3")'>[r]</button></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vibrants/ʀ.mp3")'>[ʀ]</button></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background"  rowspan="2">Central Approximants</td>
+<td class="blue-background" >Unrounded</td>
+<td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/β̞.mp3")'>[β̞]</button></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ʋ.mp3")'>[ʋ]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ɹ̥.mp3")'>[ɹ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ɹ.mp3")'>[ɹ]</button></td>
+<td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ɻ.mp3")'>[ɻ]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ç̞.mp3")'>[ç̞]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/j.mp3")'>[j]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ɰ̥.mp3")'>[ɰ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ɰ.mp3")'>[ɰ]</button></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ʁ̞.mp3")'>[ʁ̞]</button></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background" >Rounded</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ɥ̥.mp3")'>[ɥ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ɥ.mp3")'>[ɥ]</button></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ʍ.mp3")'>[ʍ]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/w.mp3")'>[w]</button></td>
+</tr>
+<tr>
+<tr>
+<td class="blue-background"  colspan="2">Lateral Approximants</td>
+<td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/l̪̥.mp3")'>[l̪̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/l̪.mp3")'>[l̪]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/l̥.mp3")'>[l̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/l.mp3")'>[l]</button></td>
+<td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ɭ̥.mp3")'>[ɭ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ɭ.mp3")'>[ɭ]</button></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ʎ̥.mp3")'>[ʎ̥]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ʎ.mp3")'>[ʎ]</button></td>
+<td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Approximants/ʟ.mp3")'>[ʟ]</button></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<td class="blue-background"  colspan="2">Ejectives</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Ejectives/pʼ.mp3")'>[p’]</button></td><td></td><td></td><td></td><td></td><td></td><td colspan="2"><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Ejectives/tʼ.mp3")'>[t’]</button><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Ejectives/sʼ.mp3")'>[s’]</button><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Ejectives/tsʼ.mp3")'>[ts’]</button></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Ejectives/tʃʼ.mp3")'>[tʃ’]</button></td>
+<td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Ejectives/ʈʼ.mp3")'>[ʈ’]</button></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Ejectives/tɕʼ.mp3")'>[tɕ’]</button></td><td></td><td></td><td></td><td></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Ejectives/kʼ.mp3")'>[k’]</button></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Ejectives/qʼ.mp3")'>[q’]</button></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background"  colspan="2">Implosives</td>
+<td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Implosives/ɓ.mp3")'>[ɓ]</button></td><td></td><td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Implosives/ɗ.mp3")'>[ɗ]</button></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Implosives/ʄ.mp3")'>[ʄ]</button></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Implosives/ɠ.mp3")'>[ɠ]</button></td><td></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Implosives/ʛ.mp3")'>[ʛ]</button></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="blue-background"  colspan="2">Clicks</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Clicks/ʘ.mp3")'>[ʘ]</button></td><td></td><td></td><td></td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Clicks/ǀ.mp3")'>[ǀ]</button></td><td align="left" colspan="2"><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Clicks/ǀ.mp3")'>[ǃ]</button><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Clicks/ǀ.mp3")'>[ǁ] (lateral)</button> </td><td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Clicks/ǂ.mp3")'>[ǂ]</button></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+</table>
+</div> 
+<div>
+<h2><center><img src="./images/Header2.png"></center></h2>
+<table height="100%" width="100%">
+<tr class="blue-background">
+<th colspan="1">TONGUE POSITION</th>
+<th colspan="2">Front Vowels </th>
+<th colspan="2">Central Vowels  </th>
+<th colspan="2">Back Vowels  </th>
+</tr>
+<tr class="blue-background"> 
+<th colspan="1">LIP SHAPE </th>
+<th colspan="1">Unrounded</th>
+<th colspan="1">Rounded</th>
+<th colspan="1">Unrounded</th>
+<th colspan="1">Rounded</th>
+<th colspan="1">Unrounded</th>
+<th colspan="1">Rounded</th>
+
+</tr>
+<tr><th class="blue-background"  >MOUTH  OPENNESS</th><th class="blue-background"   colspan="6"></th></tr>
+<tr>
+<td class="blue-background" colspan="1">Close</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/i.mp3")'>[i]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/y.mp3")'>[y]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɨ.mp3")'>[ɨ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ʉ.mp3")'>[ʉ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɯ.mp3")'>[ɯ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/u.mp3")'>[u]</button></td>
+
+</tr>
+
+</tr>
+<td class="blue-background" colspan="1">Near Close Mid</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɪ.mp3")'>[ɪ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ʏ.mp3")'>[ʏ]</button></td>
+<td></td>
+<td></td>
+<td></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ʊ.mp3")'>[ʊ]</button></td>
+
+</tr>
+
+</tr>
+<td class="blue-background" colspan="1">Close Mid</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/e.mp3")'>[e]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ø.mp3")'>[ø]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɘ.mp3")'>[ɘ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɵ.mp3")'>[ɵ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɤ.mp3")'>[ɤ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/o.mp3")'>[o]</button></td>
+
+</tr>
+
+</tr>
+<td class="blue-background" colspan="1">Mid</td>
+<td></td>
+<td></td>
+<td colspan="2"><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ə.mp3")'>[ə]</button></td>
+<td></td>
+<td></td>
+</tr>
+
+</tr>
+<td class="blue-background" colspan="1">Open Mid</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɛ.mp3")'>[ɛ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/œ.mp3")'>[œ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɜ.mp3")'>[ɜ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɞ.mp3")'>[ɞ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ʌ.mp3")'>[ʌ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɔ.mp3")'>[ɔ]</button></td>
+
+</tr>
+
+</tr>
+<td class="blue-background" colspan="1">Near Open Mid </td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/æ.mp3")'>[æ]</button></td>
+<td></td>
+<td colspan="2"><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɐ.mp3")'>[ɐ]</button></td>
+<td></td>
+<td></td>
+</tr>
+
+</tr>
+<td class="blue-background" colspan="1">Open</td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/a.mp3")'>[a]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɶ.mp3")'>[ɶ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/α.mp3")'>[α]</button>
+<td></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɑ.mp3")'>[ɑ]</button></td>
+<td><button class="ipa-symbol" onClick='playMyAudio("./audiofiles/Vowels/ɒ.mp3")'>[ɒ]</button></td>
+
+</tr>
+</table></div>
+</body>
+</html>
